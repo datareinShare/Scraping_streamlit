@@ -16,11 +16,17 @@ nest_asyncio.apply()
 load_dotenv()
 
 # ※各種APIキー・URLはご自身のものに置き換えてください
-API_KEY = os.environ.get("API_KEY")
-GEOCODE_BASE_URL = os.environ.get("GEOCODE_BASE_URL")
-PLACES_BASE_URL = os.environ.get("PLACES_BASE_URL")
-CX_ID = os.environ.get("CX_ID")
-CUSTOM_SEARCH_BASE_URL = os.environ.get("CUSTOM_SEARCH_BASE_URL")
+# API_KEY = os.environ.get("API_KEY")
+# GEOCODE_BASE_URL = os.environ.get("GEOCODE_BASE_URL")
+# PLACES_BASE_URL = os.environ.get("PLACES_BASE_URL")
+# CX_ID = os.environ.get("CX_ID")
+# CUSTOM_SEARCH_BASE_URL = os.environ.get("CUSTOM_SEARCH_BASE_URL")
+
+API_KEY = st.secrets["env"]["API_KEY"]
+GEOCODE_BASE_URL = st.secrets["env"]["GEOCODE_BASE_URL"]
+PLACES_BASE_URL = st.secrets["env"]["PLACES_BASE_URL"]
+CX_ID = st.secrets["env"]["CX_ID"]
+CUSTOM_SEARCH_BASE_URL = st.secrets["env"]["CUSTOM_SEARCH_BASE_URL"]
 
 def calculate_distance(lat1, lon1, lat2, lon2):
     R = 6371000
