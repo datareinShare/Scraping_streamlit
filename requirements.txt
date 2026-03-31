@@ -1,5 +1,5 @@
-aiohttp==3.11.11
+aiohttp>=3.13.3
 beautifulsoup4==4.12.3
 nest-asyncio==1.6.0
-streamlit==1.42.0
+streamlit>=1.54.0
 python-dotenv==1.0.1
